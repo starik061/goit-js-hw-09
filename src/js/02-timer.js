@@ -3,6 +3,7 @@ import 'flatpickr/dist/flatpickr.min.css';
 import 'flatpickr/dist/themes/material_green.css';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import 'notiflix/dist/notiflix-3.2.6.min.css';
+import * as classes from '../css/timer.scss';
 
 let timerId = null;
 let countdownTime_obj = {};

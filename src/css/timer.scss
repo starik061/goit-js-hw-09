@@ -1,0 +1,16 @@
+.timer {
+  display: flex;
+  margin-top: 2px;
+  gap: 5px;
+
+  & .field:not(:first-child) .label {
+    font-size: 0;
+  }
+
+  & .value {
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 5px 2px;
+    display: inline-block;
+  }
+}
