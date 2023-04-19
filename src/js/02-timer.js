@@ -1,6 +1,8 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 import 'flatpickr/dist/themes/material_green.css';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import 'notiflix/dist/notiflix-3.2.6.min.css';
 
 let timerId = null;
 let countdownTime_obj = {};
@@ -18,7 +20,10 @@ const datePickerOptions = {
   minuteIncrement: 1,
   onClose(selectedDates) {
     if (selectedDates[0].getTime() < Date.now()) {
-      alert('Please choose a date in the future');
+      Notify.init({
+        position: 'center-top',
+      });
+      Notify.warning('Please choose a date in the future');
       startBtn.setAttribute('disabled', 'true');
       return;
     }
