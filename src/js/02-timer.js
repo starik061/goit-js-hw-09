@@ -73,7 +73,7 @@ function refreshTimerFields() {
     timerFields.seconds.textContent === '00'
   ) {
     clearInterval(timerId);
-    for (each in timerFields) {
+    for (let each in timerFields) {
       timerFields[each].style.color = 'lime';
     }
     console.log('end');
